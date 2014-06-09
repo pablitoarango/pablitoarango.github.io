@@ -11,8 +11,13 @@
     <title>Pablo Arango</title> 
     
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="css/bootstrap-swatch.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
 
+    <style>
+    .red{
+      color: #d3222a;
+    }
+    </style>
 
   
   </head>
@@ -20,9 +25,8 @@
   <body>
 
 
-
 <!-- Navbar -->
-      <div class="navbar navbar-inverse navbar-fixed-top container" role="navigation">
+      <div id="navbar" class="navbar navbar-inverse navbar-fixed-top container" role="navigation">
         <div class="container-fluid"> 
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -31,13 +35,13 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#"><b>PABLOARANGO</b></a>
+            <a class="navbar-brand" href="#"><b><text class= "red">PABLO</text>ARANGO</b></a>
           </div>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
               <li><a href="#">Link</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+              <li class="dropup">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                   <li><a href="#">Action</a></li>
                   <li><a href="#">Another action</a></li>
@@ -50,8 +54,8 @@
               </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li class="active"><a href="./">Default</a></li>
-              <li><a href="../navbar-static-top/">Static top</a></li>
+              <li id = "default" class="active"><a href="#">Default</a></li>
+              <li id ="alternate"><a href="#">Alternate</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
@@ -66,7 +70,7 @@
         <h1>Pablo Arango</h1>
         <p>This example is to test everything works</p>
         <p>
-          <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
+          <a class="btn btn-lg btn-primary"role="button"> BUTTONSS &raquo;</a>
         </p>
       
       
@@ -91,10 +95,29 @@
       $( document ).ready(function() {
        console.log( "ready!" );
 
-       $(".navbar").css("background-color","#010101")
+      $(".navbar").css("display","none");
+      $(".jumbotron").css("display","none");
 
-       setTimeout(function() {   
-       $(".navbar").fadeIn("4000")}, 500)
+      setTimeout(function() {   
+      $(".jumbotron").fadeIn("5000")}, 100);
+      setTimeout(function() {   
+      $(".navbar").fadeIn("5000")}, 100);
+
+      $("#alternate").on("click",function(){
+        $("#navbar").addClass("navbar-default");
+        $("#navbar").removeClass("navbar-inverse");
+        $("#default").removeClass("active");
+        $("#alternate").addClass("active");
+
+      })
+
+      $("#default").on("click",function(){
+        $("#navbar").removeClass("navbar-default");
+        $("#navbar").addClass("navbar-inverse");
+        $("#alternate").removeClass("active");
+        $("#default").addClass("active");
+
+      })
 
       });
     </script>
