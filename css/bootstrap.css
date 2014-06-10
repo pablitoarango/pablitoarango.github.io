@@ -277,7 +277,7 @@ body {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   line-height: 1.42857143;
-  color: #ebebeb;
+  color: #fff;
   background-color: #a71b21;
 }
 input,
@@ -3728,7 +3728,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-fixed-top {
-  top: 90%;
+  bottom:40px;
   border-width: 0 0 1px;
 }
 .navbar-fixed-bottom {
