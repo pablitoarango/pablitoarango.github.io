@@ -7,12 +7,19 @@
 
 # Site settings
 title: Pablo Arango
-email: your-email@domain.com
+email: pabloaran17@msn.com
 description: > # this means to ignore newlines until "baseurl:"
-  Personal website and experiment for Pablo.
+  Personal website and experiment.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://pabloarango.com" # the base hostname & protocol for your site
-github_username:  whospablo
+github_username: whospablo
+linkedin_username: pabloarango
 
 # Build settings
 markdown: kramdown
+permalink: pretty
+
+gems:
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
