@@ -7,7 +7,7 @@
 
 # Site settings
 title: Pablo Arango
-email: pabloaran17@msn.com
+email: 
 description: > # this means to ignore newlines until "baseurl:"
   Personal website and experiment.
 baseurl: "" # the subpath of your site, e.g. /blog
